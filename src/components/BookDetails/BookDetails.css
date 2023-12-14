@@ -1,0 +1,23 @@
+.book-details {
+    min-height: 80vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /* text-align: center; */
+    padding: 60px;
+    color: #333;
+  }
+  
+  .book-details h2 {
+    color: #666;
+  }
+
+  .book-description {
+    margin: 0 10px;
+    padding: 80px;
+  }
+  
+  .book-description h2 {
+    padding: 8px 0;
+  }

@@ -1,0 +1,14 @@
+.favorites {
+    min-height: 80vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    place-content: center;
+    text-align: center;
+  }
+  
+  .favorites h1 {
+    margin-left: 800px;
+    width: 100%;
+  }
