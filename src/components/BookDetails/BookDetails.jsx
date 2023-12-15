@@ -12,15 +12,6 @@ const BookDetails = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    // Проверяем, если id не состоит только из цифр, показываем NotFound.jsx
-    if (!/^\d+$/.test(id)) {
-      return;
-    }
-
-    // Проверяем, если id больше 50, показываем NotFound.jsx
-    if (parseInt(id, 10) > 50) {
-      return;
-    }
 
     axios
       .get(`${BOOK_DETAILS_URL}/${id}`)
