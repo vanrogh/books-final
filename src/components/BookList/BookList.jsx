@@ -6,6 +6,8 @@ import { useAppContext } from '../context/appContext';
 import { useNavigate } from 'react-router-dom';
 
 const BookList = () => {
+    const [selectedGenre, setSelectedGenre] = useState('All');
+
     const [books, setBooks] = useState([]);
     const [searchQuery, setSearchQuery] = useState('');
 
@@ -31,9 +33,42 @@ const BookList = () => {
         setSearchQuery(event.target.value);
     };
 
-    const filteredBooks = books.filter((book) =>
-        book.title.toLowerCase().includes(searchQuery.toLowerCase())
-    );
+    // Filter books based on search query and selected genre
+    const filteredBooks = books.filter((book) => {
+    const matchesSearch = book.title.toLowerCase().includes(searchQuery.toLowerCase());
+    
+    // Check if the selected genre is 'All' or if the book's genres include the selected genre
+    const matchesGenre =
+        selectedGenre === 'All' || book.genres.includes(selectedGenre);
+
+    return matchesSearch && matchesGenre;
+});
+
+const genres = [
+    'All',
+    'Fiction',
+    'Fantasy',
+    'Young Adult',
+    'Science Fiction',
+    'Dystopia',
+    'Classics',
+    'Historical Fiction',
+    'Historical',
+    'Academic',
+    'School',
+    'Romance',
+    'Paranormal',
+    'Vampires',
+    'Politics',
+    'Novels',
+    'Read For School',
+    'Childrens',
+    'Humor',
+    'Picture Books',
+    'Gothic',
+    'Thriller',
+    'Mystery',
+  ];
 
     return (
         <div className='book-list'>
@@ -43,6 +78,14 @@ const BookList = () => {
                 value={searchQuery}
                 onChange={handleSearch}
             />
+            <label>Filter by Genre:</label>
+            <select value={selectedGenre} onChange={(e) => setSelectedGenre(e.target.value)}>
+            {genres.map((genre) => (
+                <option key={genre} value={genre}>
+                {genre}
+                </option>
+            ))}
+            </select>
             <div className='book-container'>
                 {filteredBooks.map((book) => (
                     <div key={book.id} className='book'>

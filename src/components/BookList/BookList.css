@@ -16,6 +16,26 @@
   border: 3px #ff9933 solid;
 }
 
+.book-list label {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.book-list select {
+  width: 240px;
+  height: 60px;
+  text-align: center;
+  border-radius: 20px;
+  margin-top: 20px;
+  border: 3px #ff9933 solid;
+}
+
+.book-list select option {
+  font-size: 20px;
+  font-weight: bold;
+}
+
 .book-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
