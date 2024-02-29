@@ -1,8 +1,9 @@
+// App.js
 import './App.css';
 import {
-  createBrowserRouter, 
+  createBrowserRouter,
   createRoutesFromElements,
-  Route, 
+  Route,
   RouterProvider
 } from 'react-router-dom'
 

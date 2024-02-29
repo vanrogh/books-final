@@ -7,34 +7,69 @@
   text-align: center;
 }
 
+.book-list filter {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
 .book-list input {
-  width: 240px;
+  width: 320px;
   height: 60px;
   text-align: center;
   border-radius: 20px;
-  margin-top: 40px;
+  /* margin-top: 40px; */
   border: 3px #ff9933 solid;
+  margin-top: 30px;
+  font-size: 20px;
 }
 
 .book-list label {
-  font-size: 20px;
+  font-size: 28px;
   font-weight: bold;
-  margin-top: 20px;
+  margin-right: 20px;
 }
 
 .book-list select {
-  width: 240px;
+  width: 300px;
   height: 60px;
+  padding: 10px;
   text-align: center;
   border-radius: 20px;
   margin-top: 20px;
+  margin-left: 20px;
   border: 3px #ff9933 solid;
+  font-size: 24px;
+  transition: all 0.3s ease;
 }
 
-.book-list select option {
+.book-list select::-webkit-scrollbar {
+  width: 14px;
+}
+
+.book-list select::-webkit-scrollbar-track {
+  background: #f0f0f0; 
+}
+
+.book-list select::-webkit-scrollbar-thumb {
+  background-color: #ff9933; 
+  border-radius: 20px;
+  border: 3px solid #f0f0f0;
+}
+
+.book-list select:hover {
+  border-color: #ff5500;
+  box-shadow: 0 0 10px #ff5500;
+}
+
+/* .book-list select option {
   font-size: 20px;
   font-weight: bold;
-}
+  padding: 10px;
+  background-color: #f0f0f0;
+  color: #333;
+} */
+
 
 .book-container {
   display: grid;
