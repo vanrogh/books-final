@@ -21,3 +21,7 @@
   .book-description h2 {
     padding: 8px 0;
   }
+
+.book-details button {
+  margin-top: 10px;
+}

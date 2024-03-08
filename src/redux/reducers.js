@@ -1,4 +1,3 @@
-// reducers.js
 import { ADD_TO_FAVORITES, REMOVE_FROM_FAVORITES } from './actions';
 
 const initialState = {
